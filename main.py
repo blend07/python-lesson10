@@ -1,32 +1,27 @@
-list_length = len("Hello World")
+class Student:
+    def __init__(self, name, age):
+        self.__name = name 
+        self.__age = age
+    
+    def get_name(self):
+        return self.__name
+    
+    def set_name(self, name):
+        self.__name = name
 
-print(list_length)
+    def get_age(self):
+        return self.__age
+    
+    def set_age(self, age):
+        self.__age = age
 
-length = len([1 ,4, 5, 6])
+studenti1 = Student("Blend", 17)
 
-print(length)
+print("Name:",studenti1.get_name())
 
-summ = sum([3, 6, 7, 2, 3, 1, 6, 4])
+studenti1.set_name("Darsej")
+print("Emri i perditsuar", studenti1.get_name())
 
-print(summ)
-
-maxx = max([4 , 56, 23, 53,223, 53,2132])
-
-print(maxx)
-
-import math 
-
-class shape:
-    def area(self):
-        pass
-
-class circle(shape):
-    def __init__(self, radius):
-        self.radius = radius
-
-    def area(self):
-        return math.pi * self.radius ** 2
-
-Circle = circle(5)
-
-print(Circle.area)
+print("Mosha ime eshte", studenti1.get_age())
+studenti1.set_age(18)
+print("Sot i mbusha plot", studenti1.get_age(), "vjet")
